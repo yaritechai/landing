@@ -63,13 +63,13 @@ export const metadata: Metadata = {
         url: "https://yaritech.com/hero-light.png",
         width: 1200,
         height: 630,
-        alt: "YariTech - Houston IT Services Professional Dashboard",
+        alt: "YariTech Landing Page - Professional IT Services for Houston Businesses | Light Mode",
       },
       {
         url: "https://yaritech.com/hero-dark.png",
         width: 1200,
         height: 630,
-        alt: "YariTech - Houston IT Services Professional Dashboard Dark Mode",
+        alt: "YariTech Landing Page - Professional IT Services for Houston Businesses | Dark Mode",
       },
     ],
   },
@@ -79,7 +79,10 @@ export const metadata: Metadata = {
     description: "Professional Houston IT services company providing enterprise-grade managed IT support, cloud computing, cybersecurity, and ERP solutions for Texas businesses.",
     creator: "@yaritech",
     site: "@yaritech",
-    images: ["https://yaritech.com/hero-light.png"],
+    images: [{
+      url: "https://yaritech.com/hero-light.png",
+      alt: "YariTech Landing Page - Professional IT Services for Houston Businesses"
+    }],
   },
   robots: {
     index: true,
