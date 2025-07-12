@@ -1,7 +1,8 @@
 "use client";
 
 import Marquee from "@/components/magicui/marquee";
-import { buttonVariants } from "@/components/ui/button";
+import { StarBorder } from "@/components/ui/star-border";
+import { ContactModal } from "@/components/ui/contact-modal";
 import { cn } from "@/lib/utils";
 import { motion, useAnimation, useInView } from "framer-motion";
 import {
@@ -9,16 +10,16 @@ import {
   ChevronRight,
   File,
   Globe,
-  HeartHandshake,
+  Star,
   Rss,
   Shield,
 } from "lucide-react";
-import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
+import { CustomIcon } from "./custom-icon";
 
 const tiles = [
   {
-    icon: <HeartHandshake className="size-full" />,
+    icon: <CustomIcon className="size-full" />,
     bg: (
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 overflow-visible rounded-full bg-gradient-to-r from-orange-600 via-rose-600 to-violet-600 opacity-70 blur-[20px] filter"></div>
     ),
@@ -112,6 +113,7 @@ export default function CallToActionSection() {
   const [randomTiles2, setRandomTiles2] = useState<typeof tiles>([]);
   const [randomTiles3, setRandomTiles3] = useState<typeof tiles>([]);
   const [randomTiles4, setRandomTiles4] = useState<typeof tiles>([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -172,28 +174,21 @@ export default function CallToActionSection() {
             </Marquee>
             <div className="absolute z-10">
               <div className="mx-auto size-24 rounded-[2rem] border bg-white/10 p-3 shadow-2xl backdrop-blur-md dark:bg-black/10 lg:size-32">
-                <HeartHandshake className="mx-auto size-16 text-black dark:text-white lg:size-24" />
+                <CustomIcon className="mx-auto size-16 text-black dark:text-white lg:size-24" />
               </div>
               <div className="z-10 mt-4 flex flex-col items-center text-center text-primary">
                 <h1 className="text-3xl font-bold lg:text-4xl">
-                  Stop wasting time on design.
+                  Optimize Your Business Technology Strategy
                 </h1>
                 <p className="mt-2">
-                  Start your 7-day free trial. No credit card required.
+                  Schedule a strategic consultation to discuss your technology objectives and discover how we can support your business growth.
                 </p>
-                <Link
-                  href="#"
-                  className={cn(
-                    buttonVariants({
-                      size: "lg",
-                      variant: "outline",
-                    }),
-                    "group mt-4 rounded-[2rem] px-6"
-                  )}
-                >
-                  Get Started
-                  <ChevronRight className="ml-1 size-4 transition-all duration-300 ease-out group-hover:translate-x-1" />
-                </Link>
+                <StarBorder onClick={() => setIsModalOpen(true)} className="group mt-4">
+                  <span className="flex items-center gap-1">
+                    Request Consultation
+                    <ChevronRight className="size-4 transition-all duration-300 ease-out group-hover:translate-x-1" />
+                  </span>
+                </StarBorder>
               </div>
               <div className="absolute inset-0 -z-10 rounded-full  bg-backtround opacity-40 blur-xl dark:bg-background" />
             </div>
@@ -201,6 +196,11 @@ export default function CallToActionSection() {
           </div>
         </div>
       </div>
+      
+      <ContactModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </section>
   );
 }

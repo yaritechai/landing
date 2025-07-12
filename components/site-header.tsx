@@ -1,6 +1,7 @@
 "use client";
 
 import { buttonVariants } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { AlignJustify, XIcon } from "lucide-react";
@@ -10,23 +11,23 @@ import { useEffect, useState } from "react";
 const menuItem = [
   {
     id: 1,
-    label: "Features",
-    href: "/features",
+    label: "Services",
+    href: "#services",
   },
   {
     id: 2,
-    label: "Pricing",
-    href: "#",
+    label: "About",
+    href: "#about",
   },
   {
     id: 3,
-    label: "Careers",
-    href: "#",
+    label: "FAQ",
+    href: "#faq",
   },
   {
     id: 4,
     label: "Contact Us",
-    href: "#",
+    href: "#contact",
   },
 ];
 
@@ -98,25 +99,31 @@ export function SiteHeader() {
   return (
     <>
       <header className="fixed left-0 top-0 z-50 w-full translate-y-[-1rem] animate-fade-in border-b opacity-0 backdrop-blur-[12px] [--animation-delay:600ms]">
-        <div className="container flex h-[3.5rem] items-center justify-between">
-          <Link className="text-md flex items-center" href="/">
-            Magic UI
-          </Link>
+                  <div className="container flex h-[3.5rem] items-center justify-between">
+            <Link className="text-md flex items-center" href="/">
+              <div className="rounded-lg bg-white/10 dark:bg-black/10 backdrop-blur-sm border border-white/20 dark:border-white/10 p-2">
+                <img 
+                  src="https://rd9rzh3qxh.ufs.sh/f/NUZrLWPd7wqS8q3nT4H0u2mQZfzoDwFiTjAaNkBehOYKdIX1" 
+                  alt="Yari Tech Logo" 
+                  className="h-6 w-6"
+                />
+              </div>
+            </Link>
 
-          <div className="ml-auto flex h-full items-center">
-            <Link className="mr-6 text-sm" href="/signin">
-              Log in
-            </Link>
-            <Link
-              className={cn(
-                buttonVariants({ variant: "secondary" }),
-                "mr-6 text-sm"
-              )}
-              href="/signup"
-            >
-              Sign up
-            </Link>
-          </div>
+                      <div className="ml-auto flex h-full items-center gap-3">
+              <ThemeToggle />
+              <Link
+                className={cn(
+                  buttonVariants({ variant: "secondary" }),
+                  "mr-6 text-sm"
+                )}
+                href="https://yaritech.screenconnect.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Support
+              </Link>
+            </div>
           <button
             className="ml-6 md:hidden"
             onClick={() => setHamburgerMenuIsOpen((open) => !open)}
@@ -141,16 +148,25 @@ export function SiteHeader() {
         >
           <div className="container flex h-[3.5rem] items-center justify-between">
             <Link className="text-md flex items-center" href="/">
-              Magic UI
+              <div className="rounded-lg bg-white/10 dark:bg-black/10 backdrop-blur-sm border border-white/20 dark:border-white/10 p-2">
+                <img 
+                  src="https://rd9rzh3qxh.ufs.sh/f/NUZrLWPd7wqS8q3nT4H0u2mQZfzoDwFiTjAaNkBehOYKdIX1" 
+                  alt="Yari Tech Logo" 
+                  className="h-6 w-6"
+                />
+              </div>
             </Link>
 
-            <button
-              className="ml-6 md:hidden"
-              onClick={() => setHamburgerMenuIsOpen((open) => !open)}
-            >
-              <span className="sr-only">Toggle menu</span>
-              {hamburgerMenuIsOpen ? <XIcon /> : <AlignJustify />}
-            </button>
+            <div className="flex items-center gap-2">
+              <ThemeToggle />
+              <button
+                className="ml-2 md:hidden"
+                onClick={() => setHamburgerMenuIsOpen((open) => !open)}
+              >
+                <span className="sr-only">Toggle menu</span>
+                {hamburgerMenuIsOpen ? <XIcon /> : <AlignJustify />}
+              </button>
+            </div>
           </div>
           <motion.ul
             className={`flex flex-col md:flex-row md:items-center uppercase md:normal-case ease-in`}

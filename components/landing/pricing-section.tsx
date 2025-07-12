@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { StarBorder } from "@/components/ui/star-border";
 import { Switch } from "@/components/ui/switch";
 import { cn } from "@/lib/utils";
 import { CheckIcon } from "@radix-ui/react-icons";
@@ -16,64 +16,65 @@ export const toHumanPrice = (price: number, decimals: number = 2) => {
 const demoPrices = [
   {
     id: "price_1",
-    name: "Basic",
-    description: "A basic plan for startups and individual users",
+    name: "Essential",
+    description: "Perfect for small businesses getting started",
     features: [
-      "AI-powered analytics",
-      "Basic support",
-      "5 projects limit",
-      "Access to basic AI tools",
+      "24/7 IT helpdesk support",
+      "Basic cloud backup",
+      "Network monitoring",
+      "Monthly system updates",
+      "Email support",
     ],
-    monthlyPrice: 1000,
-    yearlyPrice: 10000,
+    monthlyPrice: 15000,
+    yearlyPrice: 150000,
     isMostPopular: false,
   },
   {
     id: "price_2",
-    name: "Premium",
-    description: "A premium plan for growing businesses",
+    name: "Professional",
+    description: "Ideal for growing businesses with complex needs",
     features: [
-      "Advanced AI insights",
-      "Priority support",
-      "Unlimited projects",
-      "Access to all AI tools",
+      "Everything in Essential",
+      "Cloud computing solutions",
+      "AI-powered automation",
+      "Priority phone support",
       "Custom integrations",
+      "Cybersecurity monitoring",
     ],
-    monthlyPrice: 2000,
-    yearlyPrice: 20000,
+    monthlyPrice: 29900,
+    yearlyPrice: 299000,
     isMostPopular: true,
   },
   {
     id: "price_5",
     name: "Enterprise",
-    description:
-      "An enterprise plan with advanced features for large organizations",
+    description: "Comprehensive solutions for large organizations",
     features: [
+      "Everything in Professional",
+      "Dedicated account manager",
       "Custom AI solutions",
-      "24/7 dedicated support",
-      "Unlimited projects",
-      "Access to all AI tools",
-      "Custom integrations",
-      "Data security and compliance",
+      "Advanced security protocols",
+      "Compliance management",
+      "24/7 on-site support",
     ],
-    monthlyPrice: 5000,
-    yearlyPrice: 50000,
+    monthlyPrice: 59900,
+    yearlyPrice: 599000,
     isMostPopular: false,
   },
   {
     id: "price_6",
-    name: "Ultimate",
-    description: "The ultimate plan with all features for industry leaders",
+    name: "Custom",
+    description: "Tailored solutions for unique business requirements",
     features: [
+      "Fully customized IT strategy",
+      "Dedicated technical team",
       "Bespoke AI development",
-      "White-glove support",
-      "Unlimited projects",
-      "Priority access to new AI tools",
-      "Custom integrations",
-      "Highest data security and compliance",
+      "White-glove implementation",
+      "Unlimited support",
+      "Strategic IT consulting",
     ],
-    monthlyPrice: 8000,
-    yearlyPrice: 80000,
+    monthlyPrice: 99900,
+    yearlyPrice: 999000,
     isMostPopular: false,
   },
 ];
@@ -95,17 +96,17 @@ export default function PricingSection() {
       <div className="mx-auto flex max-w-screen-xl flex-col gap-8 px-4 py-14 md:px-8">
         <div className="mx-auto max-w-5xl text-center">
           <h4 className="text-xl font-bold tracking-tight text-black dark:text-white">
-            Pricing
+            IT Support Plans
           </h4>
 
           <h2 className="text-5xl font-bold tracking-tight text-black dark:text-white sm:text-6xl">
-            Simple pricing for everyone.
+            Solutions that fit your business.
           </h2>
 
           <p className="mt-6 text-xl leading-8 text-black/80 dark:text-white">
-            Choose an <strong>affordable plan</strong> that&apos;s packed with
-            the best features for engaging your audience, creating customer
-            loyalty, and driving sales.
+            Choose a <strong>managed services plan</strong> that&apos;s designed
+            to optimize your operations, enhance productivity, and deliver
+            maximum ROI for your business.
           </p>
         </div>
 
@@ -175,24 +176,25 @@ export default function PricingSection() {
                 </span>
               </motion.div>
 
-              <Button
+              <StarBorder
                 className={cn(
-                  "group relative w-full gap-2 overflow-hidden text-lg font-semibold tracking-tighter",
-                  "transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-2"
+                  "group relative w-full cursor-pointer",
+                  isLoading && "opacity-50 pointer-events-none"
                 )}
-                disabled={isLoading}
                 onClick={() => void onSubscribeClick(price.id)}
               >
-                <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform-gpu bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-96 dark:bg-black" />
-                {(!isLoading || (isLoading && id !== price.id)) && (
-                  <p>Subscribe</p>
-                )}
-
-                {isLoading && id === price.id && <p>Subscribing</p>}
-                {isLoading && id === price.id && (
-                  <Loader className="mr-2 h-4 w-4 animate-spin" />
-                )}
-              </Button>
+                <span className="flex items-center justify-center gap-2 text-lg font-semibold tracking-tighter">
+                  {(!isLoading || (isLoading && id !== price.id)) && (
+                    <span>Subscribe</span>
+                  )}
+                  {isLoading && id === price.id && (
+                    <>
+                      <Loader className="h-4 w-4 animate-spin" />
+                      <span>Subscribing</span>
+                    </>
+                  )}
+                </span>
+              </StarBorder>
 
               <hr className="m-0 h-px w-full border-none bg-gradient-to-r from-neutral-200/0 via-neutral-500/30 to-neutral-200/0" />
               {price.features && price.features.length > 0 && (
