@@ -101,7 +101,7 @@ export function SiteHeader() {
       <header className="fixed left-0 top-0 z-50 w-full translate-y-[-1rem] animate-fade-in border-b opacity-0 backdrop-blur-[12px] [--animation-delay:600ms]">
                   <div className="container flex h-[3.5rem] items-center justify-between">
             <Link className="text-md flex items-center" href="/">
-              <div className="rounded-lg bg-white/10 dark:bg-black/10 backdrop-blur-sm border border-white/20 dark:border-white/10 p-2">
+              <div className="rounded-lg bg-white/10 dark:bg-black/10 backdrop-blur-sm border border-white/20 dark:border-white/10 px-2 py-3">
                 <img 
                   src="https://rd9rzh3qxh.ufs.sh/f/NUZrLWPd7wqS8q3nT4H0u2mQZfzoDwFiTjAaNkBehOYKdIX1" 
                   alt="Yari Tech Logo" 
@@ -148,7 +148,7 @@ export function SiteHeader() {
         >
           <div className="container flex h-[3.5rem] items-center justify-between">
             <Link className="text-md flex items-center" href="/">
-              <div className="rounded-lg bg-white/10 dark:bg-black/10 backdrop-blur-sm border border-white/20 dark:border-white/10 p-2">
+              <div className="rounded-lg bg-white/10 dark:bg-black/10 backdrop-blur-sm border border-white/20 dark:border-white/10 px-2 py-3">
                 <img 
                   src="https://rd9rzh3qxh.ufs.sh/f/NUZrLWPd7wqS8q3nT4H0u2mQZfzoDwFiTjAaNkBehOYKdIX1" 
                   alt="Yari Tech Logo" 
