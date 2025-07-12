@@ -1,0 +1,69 @@
+{
+  "name": "YariTech - Houston IT Services",
+  "short_name": "YariTech",
+  "description": "Professional Houston IT services company providing enterprise-grade managed IT support, cloud computing, cybersecurity, and ERP solutions for Texas businesses.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#f97316",
+  "background_color": "#ffffff",
+  "scope": "/",
+  "lang": "en-US",
+  "categories": ["business", "technology", "productivity"],
+  "icons": [
+    {
+      "src": "https://rd9rzh3qxh.ufs.sh/f/NUZrLWPd7wqS8q3nT4H0u2mQZfzoDwFiTjAaNkBehOYKdIX1",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://rd9rzh3qxh.ufs.sh/f/NUZrLWPd7wqS8q3nT4H0u2mQZfzoDwFiTjAaNkBehOYKdIX1",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/hero-light.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "YariTech Houston IT Services Dashboard"
+    },
+    {
+      "src": "/hero-dark.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "YariTech Houston IT Services Dashboard (Dark Mode)"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get in touch with YariTech for your IT needs",
+      "url": "/?contact=true",
+      "icons": [
+        {
+          "src": "https://rd9rzh3qxh.ufs.sh/f/NUZrLWPd7wqS8q3nT4H0u2mQZfzoDwFiTjAaNkBehOYKdIX1",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Our Services",
+      "short_name": "Services",
+      "description": "Explore our comprehensive IT services",
+      "url": "/#services",
+      "icons": [
+        {
+          "src": "https://rd9rzh3qxh.ufs.sh/f/NUZrLWPd7wqS8q3nT4H0u2mQZfzoDwFiTjAaNkBehOYKdIX1",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+} 
