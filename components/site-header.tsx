@@ -105,7 +105,7 @@ export function SiteHeader() {
                 <img 
                   src="https://rd9rzh3qxh.ufs.sh/f/NUZrLWPd7wqS8q3nT4H0u2mQZfzoDwFiTjAaNkBehOYKdIX1" 
                   alt="Yari Tech Logo" 
-                  className="h-6 w-6"
+                  className="h-8 w-8"
                 />
               </div>
             </Link>
@@ -152,7 +152,7 @@ export function SiteHeader() {
                 <img 
                   src="https://rd9rzh3qxh.ufs.sh/f/NUZrLWPd7wqS8q3nT4H0u2mQZfzoDwFiTjAaNkBehOYKdIX1" 
                   alt="Yari Tech Logo" 
-                  className="h-6 w-6"
+                  className="h-8 w-8"
                 />
               </div>
             </Link>
