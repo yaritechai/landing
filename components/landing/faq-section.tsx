@@ -43,7 +43,7 @@ const faqs = [
   {
     id: 8,
     question: "How do I get started with Yari Tech?",
-    answer: "Getting started is easy! Simply reach out to us for a free consultation. You can contact us at info@yaritech.com or call us at 713-302-7343. We'll discuss your specific needs and goals, and design a tailored solution that fits your business perfectly. We understand the importance of efficiency and cost-effectiveness in today's competitive landscape."
+    answer: "Getting started is easy! Simply reach out to us for a free consultation. You can contact us at info@yaritech.com. We'll discuss your specific needs and goals, and design a tailored solution that fits your business perfectly. We understand the importance of efficiency and cost-effectiveness in today's competitive landscape."
   }
 ];
 
@@ -114,12 +114,6 @@ export default function FAQSection() {
               className="inline-flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
             >
               📧 info@yaritech.com
-            </a>
-            <a
-              href="tel:713-302-7343"
-              className="inline-flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
-            >
-              📞 713-302-7343
             </a>
           </div>
         </div>

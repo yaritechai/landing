@@ -29,8 +29,7 @@ export default function HeroSection() {
         <br className="hidden md:block" /> for Houston Businesses
       </h1>
       <p className="mb-12 text-lg tracking-tight text-gray-400 md:text-xl text-balance translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
-        Trusted Houston IT partner delivering comprehensive managed services, cloud solutions, and cybersecurity expertise.
-        <br className="hidden md:block" /> We help Texas businesses optimize operations and achieve sustainable growth through proven technology strategies.
+        We help businesses run smoother, work smarter, and grow faster. From reliable IT support and cloud solutions to the latest in AI tools, we make technology simple, secure, and tailored to your goals.
       </p>
       <StarBorder 
         className="translate-y-[-1rem] animate-fade-in opacity-0 ease-in-out [--animation-delay:600ms]"

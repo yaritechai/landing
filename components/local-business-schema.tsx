@@ -9,7 +9,7 @@ export default function LocalBusinessSchema() {
     "alternateName": "Yari Tech",
     "description": "Professional Houston IT services company providing enterprise-grade managed IT support, cloud computing, cybersecurity, and ERP solutions for Texas businesses.",
     "url": "https://yaritech.com",
-    "telephone": "+1-XXX-XXX-XXXX", // Replace with actual phone number
+
     "email": "info@yaritech.com", // Replace with actual email
     "address": {
       "@type": "PostalAddress",

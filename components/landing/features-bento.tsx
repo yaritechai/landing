@@ -33,15 +33,15 @@ export function FeaturesBento() {
                             </CardContent>
                         </Card>
 
-                        {/* 24/7 Support */}
+                        {/* World Class Support */}
                         <Card className="relative col-span-full overflow-hidden sm:col-span-3 lg:col-span-2 group hover:shadow-lg transition-all duration-300">
                             <CardContent className="pt-6">
                                 <div className="relative mx-auto flex aspect-square size-32 rounded-full border border-gray-200 dark:border-gray-700 before:absolute before:-inset-2 before:rounded-full before:border before:border-gray-100 dark:before:border-gray-800">
                                     <Headphones className="m-auto size-16 text-yellow-500" strokeWidth={1} />
                                 </div>
                                 <div className="relative z-10 mt-6 space-y-2 text-center">
-                                    <h3 className="text-lg font-medium text-black dark:text-white">24/7 Support</h3>
-                                    <p className="text-gray-600 dark:text-gray-400">Round-the-clock IT support when you need it most</p>
+                                    <h3 className="text-lg font-medium text-black dark:text-white">World Class Support</h3>
+                                    <p className="text-gray-600 dark:text-gray-400">Premium IT support when you need it most</p>
                                 </div>
                             </CardContent>
                         </Card>
